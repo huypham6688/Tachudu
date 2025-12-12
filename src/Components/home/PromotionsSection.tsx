@@ -1,7 +1,9 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Tag, Calendar, Gift, Percent, ArrowRight } from 'lucide-react';
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 
 const promotions = [
     {

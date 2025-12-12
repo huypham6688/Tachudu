@@ -1,10 +1,12 @@
+"use client";
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+import { Button } from "@/Components/ui/button";
+import { Input } from "@/Components/ui/input";
+import { Textarea } from "@/Components/ui/textarea";
+import { Label } from "@/Components/ui/label";
 
 const contactInfo = [
     {
@@ -38,13 +40,13 @@ export default function ContactSection() {
     });
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Handle form submission
         setSubmitted(true);
         setTimeout(() => setSubmitted(false), 3000);
         setFormData({ name: '', email: '', phone: '', message: '' });
     };
+
 
     return (
         <section id="contact" className="py-24 bg-gray-50">
@@ -99,14 +101,15 @@ export default function ContactSection() {
                         {/* Map */}
                         <div className="mt-8 rounded-2xl overflow-hidden shadow-lg h-64">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.292582449142!2d105.83829831476308!3d20.97982158602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac71e3c6e0dd%3A0x3de3b8b0c63e5a8b!2zxJDhu4tuaCBDw7RuZywgSG_DoG5nIE1haSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1620000000000!5m2!1svi!2s"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4530.489355875251!2d105.82828397601472!3d20.981225480656267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac5f398749dd%3A0xcc45319a2aad7004!2zNCBQLiDEkOG7i25oIEPDtG5nLCDEkOG7i25oIEPDtG5nLCBIb8OgbmcgTWFpLCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e1!3m2!1svi!2s!4v1765529728557!5m2!1svi!2s"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
-                                allowFullScreen=""
+                                allowFullScreen
                                 loading="lazy"
                                 title="Tachudu Office Location"
                             />
+
                         </div>
                     </motion.div>
 
