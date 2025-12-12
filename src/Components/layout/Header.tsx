@@ -41,7 +41,7 @@ export default function Header() {
                         {/* Logo */}
                         <a href="#home" className="flex items-center gap-3">
                             <img
-                                src="/logo.png"
+                                src="/Logo.svg"
                                 alt="Tachudu Logo"
                                 className="w-20 h-20 object-contain"
                             />
