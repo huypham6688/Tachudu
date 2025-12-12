@@ -43,12 +43,12 @@ export default function Header() {
                             <img
                                 src="/Logo.svg"
                                 alt="Tachudu Logo"
-                                className="w-20 h-20 object-contain"
+                                className="w-20 h-20 object-contain -translate-y-1"
                             />
                             <span className={`font-bold text-xl ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-        Tachudu
     </span>
                         </a>
+
 
 
                         {/* Desktop Navigation */}
