@@ -22,7 +22,9 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden">
+        <section
+            id={"home"}
+            className="relative min-h-screen flex items-center overflow-hidden">
             {/* Background Images */}
             {heroImages.map((img, index) => (
                 <motion.div

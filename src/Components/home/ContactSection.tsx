@@ -49,7 +49,7 @@ export default function ContactSection() {
 
 
     return (
-        <section id="contact" className="py-24 bg-gray-50">
+        <section id="contact" className="py-24 bg-gray-50 scroll-mt-6">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <motion.div
